@@ -89,3 +89,8 @@ You should just need Java 17+ and connectivity to maven central. To run the appl
 
 and access on localhost:8080
 
+To run tests:
+```
+./gradlew test
+```
+
