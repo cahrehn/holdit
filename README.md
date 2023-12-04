@@ -79,3 +79,13 @@ If all the attributes are empty i.e. the request is `{}`, we can show all the re
 
 In general, we probably want to sort the reservations by date and time. If a date isn't provided, we default to showing today's reservations.
 
+### Requirements/How to Run
+
+You should just need Java 17+ and connectivity to maven central. To run the application, launch it from command line:
+
+```
+./gradlew bootRun
+```
+
+and access on localhost:8080
+
