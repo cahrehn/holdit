@@ -94,3 +94,32 @@ To run tests:
 ./gradlew test
 ```
 
+### TODO
+* Validate request for required fields i.e. anything that doesn't require any real data.
+* Design and implement database schema.
+* Implement persistence using a database with transactions.
+* Implement filtering.
+* Split up API model from the internal representation and use something like protobufs instead of managing POJOs.
+
+### Future Considerations
+* The create endpoint doesn't need to be authenticated, but we will need some sort of spam protection like requiring a non-VoIP phone number confirmation or a credit card to hold the reservation.
+
+* Validate that we're creating a reservation in the future.
+
+* Confirmation via email/text.
+
+* Reminder a day or so before via email/text with the ability to cancel the reservation within some configured limit before the reservation.
+
+* Some sort of user management for restaurant customers to be able to do things like limit the number of open reservations per person.
+
+* In the case where a reservation isn't available, it'd be nice to show options earlier/later the same day or the same time slot within a day or two if they exist.
+
+* Waitlist.
+
+* Cron job to open up reservations at some configured interval e.g. 30 days out.
+
+* The list endpoint will need to be behind authentication so only authorized users can lookup reservation info.
+
+* Reservation management both for restaurant managers and customers with notifications to restaurant customers for stuff like cancellations.
+
+* Give more thought to white-labeling, multi-tenancy, stuff like that where presumably this isn't just a one-off for a single restaurant.
